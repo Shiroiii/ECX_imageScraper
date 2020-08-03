@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import urllib.request
+
 
 GOOGLE_IMAGE = 'https://www.google.com/search?tbm=isch&biw=1366&bih=606&q=' #main search string...Query to be added by main()
 usr_agent = {
