@@ -16,6 +16,7 @@ def main():
     global GOOGLE_IMAGE
     imgString = input('Enter image to search for: ').split(' ')
     print('Searching...')
+    # attaches query to search string
     for q in imgString:
         if GOOGLE_IMAGE[-1] == '=':
             search = q
@@ -31,7 +32,7 @@ def main():
     for result in results:
         #Some results don't have a data-src attribute
         try:
-            a = result.a.img['data-src']
+            a = result.a.img['data-src'] # returns html link
         except KeyError:
             continue
         print(f'Image found: {a}')
@@ -39,5 +40,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
